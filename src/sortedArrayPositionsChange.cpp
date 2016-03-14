@@ -13,7 +13,29 @@ NOTES:
 
 #include <stdio.h>
 
+void interchange(int *ptr1, int *ptr2){
+	int tmp;
+	tmp = *ptr1;
+	*ptr1 = *ptr2;
+	*ptr2 = tmp;
+}
+
+
+
 void * sortedArrayPositionsChange(int *Arr, int len)
 {
-	return NULL;
+	int i,j,tmp;
+	
+	if (Arr == NULL || len <= 0)
+		return NULL;
+	for (i = 0; i < len-1; i++)
+		if (Arr[i] > Arr[i + 1])
+			interchange(&Arr[i], &Arr[i + 1]);
+	
+	for (j = len - 1; j > 0; j--){
+		if (Arr[j] < Arr[j - 1])
+			interchange(&Arr[j], &Arr[j - 1]);
+	}
+	
+
 }

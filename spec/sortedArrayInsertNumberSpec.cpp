@@ -32,7 +32,7 @@ namespace spec
 		TEST_METHOD(insertAtFirstIndex)
 		{
 			int *Arr = createArray();
-			Arr = sortedArrayInsertNumber(Arr, 5, 1);
+			Arr = sortedArrayInsertNumber(Arr, 5, 1);			
 			Assert::AreEqual(1, Arr[0], L"0th index value should be 1", LINE_INFO());
 		}
 

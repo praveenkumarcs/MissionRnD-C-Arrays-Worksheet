@@ -29,8 +29,8 @@ namespace spec
 		{
 			struct student students[3] = { { "stud1", 70 }, { "stud2", 60 }, { "stud3", 50 } };
 			scoresDescendingSort(students, 3);
-			Assert::AreEqual(70, students[0].score, L"Value at index 0 should be 50", LINE_INFO());
-			Assert::AreEqual(60, students[1].score, L"Value at index 1 should be 50", LINE_INFO());
+			Assert::AreEqual(70, students[0].score, L"Value at index 0 should be 70", LINE_INFO());
+			Assert::AreEqual(60, students[1].score, L"Value at index 1 should be 60", LINE_INFO());
 			Assert::AreEqual(50, students[2].score, L"Value at index 2 should be 50", LINE_INFO());
 		}
 
